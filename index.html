@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ali Sapte — Aerospace Engineering Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFFFF;
+    --ink:#22201C;
+    --ink-soft:#6B665D;
+    --line:#E4DFD3;
+    --accent:#7A5A2E;
+    --accent-soft:#F3ECDE;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#171512; --ink:#EDE9E1; --ink-soft:#AFA89A; --line:#3A362E; --accent:#C9A15E; --accent-soft:#2A2419;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#171512; --ink:#EDE9E1; --ink-soft:#AFA89A; --line:#3A362E; --accent:#C9A15E; --accent-soft:#2A2419;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Source Serif 4', Georgia, serif;}
+
+  .page{max-width:700px; margin:0 auto; padding:72px 24px 100px;}
+
+  header{margin-bottom:56px;}
+  .eyebrow{font-size:0.92rem; color:var(--accent); margin:0 0 6px; font-weight:500;}
+  h1{font-family:'Source Serif 4', Georgia, serif; font-weight:700; font-size:2.6rem; line-height:1.15; margin:0 0 18px; letter-spacing:-0.01em;}
+  .intro{font-size:1.08rem; color:var(--ink-soft); max-width:56ch; margin:0 0 20px;}
+  .creds{font-size:0.92rem; color:var(--ink-soft);}
+  .creds span:not(:last-child)::after{content:"  /  "; color:var(--line); font-style:normal;}
+
+  h2{font-family:'Source Serif 4', Georgia, serif; font-weight:600; font-style:italic; font-size:1.5rem; margin:0 0 8px; color:var(--ink);}
+  .section-intro{color:var(--ink-soft); font-size:0.98rem; margin:0 0 28px; max-width:58ch;}
+
+  section{margin:52px 0;}
+  section + section{border-top:1px solid var(--line); padding-top:44px;}
+
+  .entry{padding:26px 0; border-bottom:1px solid var(--line);}
+  .entry:first-child{padding-top:0;}
+  .entry:last-child{border-bottom:none; padding-bottom:0;}
+  .entry h3{font-family:'Source Serif 4', Georgia, serif; font-weight:600; font-size:1.32rem; margin:0 0 6px;}
+  .entry .role{font-size:0.86rem; color:var(--accent); margin:0 0 10px; font-style:italic;}
+  .entry p{font-size:0.98rem; color:var(--ink-soft); margin:0 0 14px; max-width:60ch;}
+  .entry .links a{font-size:0.94rem; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--accent); padding-bottom:1px; margin-right:22px;}
+  .entry .links a:hover{color:var(--accent);}
+
+  .entry.pending h3{color:var(--ink-soft);}
+  .entry.pending .role{color:var(--ink-soft);}
+  .entry.pending p{font-style:italic;}
+
+  .skills{font-size:1rem; color:var(--ink-soft); max-width:60ch;}
+  .skills b{color:var(--ink); font-weight:600;}
+
+  footer{margin-top:60px; padding-top:24px; border-top:1px solid var(--line); font-size:0.86rem; color:var(--ink-soft);}
+
+  ::selection{background:var(--accent-soft); color:var(--ink);}
+
+  @media (max-width:600px){
+    .page{padding:48px 20px 70px;}
+    h1{font-size:2.1rem;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <p class="eyebrow">Aerospace Engineering</p>
+    <h1>Ali Sapte</h1>
+    <p class="intro">Third-year Aerospace Engineering student at Swansea University, working across aircraft design, structures and vehicle dynamics — from first-principles hand calculations through to CAD, structural verification and commercial casework.</p>
+    <p class="creds"><span>Swansea University</span><span>Royal Aeronautical Society</span></p>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+    <p class="section-intro">A working record of design and analysis projects, kept up to date as new work is finished.</p>
+
+    <div class="entry">
+      <h3>Optimising a Composite Wing Spar</h3>
+      <p class="role">Independent coursework — SolidWorks FEA &amp; design of experiments</p>
+      <p>Ran a structural FEA and a four-variable Taguchi L16 design-of-experiments study on a CFRP sailplane wing spar, cutting material out of a heavily over-engineered baseline while keeping a safe factor of safety — with a mesh-dependency check and a full manufacturing drawing.</p>
+      <div class="links">
+        <a href="solidworks-spar-optimization.html" target="_blank" rel="noopener">View project</a>
+      </div>
+    </div>
+
+    <div class="entry">
+      <h3>Cessna 210 Centurion — Cargo Redesign</h3>
+      <p class="role">Team project, with an individually authored structural report</p>
+      <p>Re-sized a light utility aircraft to carry 15–20% more payload after stripping four passenger seats — MTOW, wing loading, wing and tail design. My own contribution goes further: a structural report verifying the vertical tail against CS-23 loads with a V-n diagram, vortex-lattice aerodynamics and a hand-worked stress analysis.</p>
+      <div class="links">
+        <a href="cessna210-cargo-redesign.html" target="_blank" rel="noopener">View project</a>
+      </div>
+    </div>
+
+    <div class="entry">
+      <h3>Airbus A350-1000 XWB — Landing Gear</h3>
+      <p class="role">Independent study, under FAR 23/25</p>
+      <p>Reverse-engineered the main landing gear of the A350-1000 from public aircraft data: touchdown speed, static load distribution, tyre selection from a manufacturer's catalogue, and shock-absorber sizing from the landing energy balance — each step verified by hand.</p>
+      <div class="links">
+        <a href="a350-landing-gear-case-study.html" target="_blank" rel="noopener">View project</a>
+      </div>
+    </div>
+
+    <div class="entry">
+      <h3>Rocket-Launched Payload Glider</h3>
+      <p class="role">Team project — engineering design and commercial case</p>
+      <p>Designed, sized and built a small glider that launches on a model rocket motor and carries a 70 g payload back down intact — six concepts narrowed by a weighted decision matrix, then sized with first-principles aerodynamics. My team and I also built the commercial case for putting it into production: market sizing, unit economics and a funding pitch.</p>
+      <div class="links">
+        <a href="glider-design-project.html" target="_blank" rel="noopener">Engineering design</a>
+        <a href="glider-commercial-case.html" target="_blank" rel="noopener">Commercial case</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>In progress</h2>
+    <div class="entry pending">
+      <h3>Final individual project</h3>
+      <p class="role">Undetermined</p>
+    </div>
+    <div class="entry pending">
+      <h3>Final group project</h3>
+      <p class="role">Undetermined</p>
+    </div>
+    <div class="entry pending">
+      <h3>Aero CFD Study — ANSYS Fluent</h3>
+      <p class="role">Self-directed</p>
+      <p>A basic external-aero CFD study on a front wing or diffuser profile. Starting in 2D, validated against a known aerofoil's published Cl/Cd before trusting the setup, then tracking how one variable — angle of attack or ground clearance — shifts downforce and drag. A simple 3D wing-and-endplate case if time allows.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tools &amp; methods</h2>
+    <p class="skills"><b>CAD &amp; simulation:</b> SolidWorks, ANSYS &nbsp; · &nbsp; <b>Computation:</b> MATLAB, Python &nbsp; · &nbsp; <b>Systems engineering:</b> Capella, Rhapsody</p>
+  </section>
+
+  <footer>
+    Aerospace Engineering, Swansea University — updated as new projects are finished.
+  </footer>
+
+</div>
+</body>
+</html>
